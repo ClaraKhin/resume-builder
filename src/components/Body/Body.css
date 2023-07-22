@@ -1,0 +1,62 @@
+#body .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  align-items: center;
+  padding-top: 0;
+}
+
+#body .container .heading {
+  font-weight: 500;
+  font-size: 2rem;
+}
+#body .container .toolbar {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#body .container .toolbar .toolbar-btns {
+  display: flex;
+  gap: 20px;
+  padding: 0 30px;
+}
+#body .container .toolbar .toolbar-btns .toolbar-btn {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+  border: none;
+}
+#body .container .toolbar button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: linear-gradient(
+    105.4deg,
+    rgb(216, 176, 216) 23.9%,
+    rgb(53, 169, 215) 86.5%
+  );
+  color: #f76b8a;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#body .container .toolbar button:hover {
+  transform: translateY(2px);
+  background: linear-gradient(
+    105.4deg,
+    rgba(216, 176, 216, 0.626) 23.9%,
+    rgba(53, 169, 215, 0.614) 86.5%
+  );
+  color: #f48db4;
+}
