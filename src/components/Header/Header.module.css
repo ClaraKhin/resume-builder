@@ -1,4 +1,4 @@
-#header .container {
+.container {
   padding: 50px 30px;
   text-align: center;
   width: 100%;
@@ -14,7 +14,7 @@
   min-height: 85vh;
 }
 
-#header .container .left .heading {
+.heading {
   margin: 0 auto;
   max-width: 500px;
   color: black;
@@ -24,7 +24,7 @@
   line-height: 4rem;
 }
 
-#header .container .left .heading span {
+span {
   background: linear-gradient(
     179.2deg,
     rgb(34, 34, 34) 0%,
@@ -35,7 +35,6 @@
   background-clip: text;
   color: transparent;
 }
-
-#header .container .right img {
+img {
   width: 400px;
 }
