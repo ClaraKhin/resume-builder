@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { X } from "react-feather";
 
 import InputControl from "../InputControl/InputControl";
@@ -584,7 +585,7 @@ function Editor(props) {
       linkedin: activeInfo.details[activeDetailIndex]?.linkedin || "",
       github: activeInfo.details[activeDetailIndex]?.github || "",
       college: activeInfo.details[activeDetailIndex]?.college || "",
-    });
+    }); 
   }, [activeDetailIndex]);
 
   return (
