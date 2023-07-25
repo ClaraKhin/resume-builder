@@ -587,13 +587,7 @@ function Editor(props) {
       github: activeInfo.details[activeDetailIndex]?.github || "",
       college: activeInfo.details[activeDetailIndex]?.college || "",
     });
-  }, [
-    activeDetailIndex,
-    activeSectionKey,
-    activeInformation?.details,
-    information,
-    sections,
-  ]);
+  }, [activeDetailIndex, activeInformation?.details, information, sections]);
 
   return (
     <div className={styles.container}>
