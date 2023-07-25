@@ -40,7 +40,7 @@ function Editor(props) {
       <div className={styles.row}>
         <InputControl
           label="Name"
-          placeholder="Enter your full name!"
+          placeholder="Enter your full name"
           value={values.name}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, name: event.target.value }))
@@ -587,7 +587,7 @@ function Editor(props) {
       github: activeInfo.details[activeDetailIndex]?.github || "",
       college: activeInfo.details[activeDetailIndex]?.college || "",
     });
-  }, [activeDetailIndex, activeSectionKey, activeInformation?.details, information, sections]);
+  }, [activeInformation?.details, information, sections, activeDetailIndex]);
 
   return (
     <div className={styles.container}>
