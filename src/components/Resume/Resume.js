@@ -258,43 +258,44 @@ const Resume = forwardRef((props, ref) => {
     ),
   };
 
-  const swapSourceTarget = (source, target) => {
-    if (!source || !target) return;
-    const tempColumns = [[...columns[0]], [...columns[1]]];
-
-    let sourceRowIndex = tempColumns[0].findIndex((item) => item === source);
-    let sourceColumnIndex = 0;
-    if (sourceRowIndex < 0) {
-      sourceColumnIndex = 1;
-      sourceRowIndex = tempColumns[1].findIndex((item) => item === source);
-    }
-
-    let targetRowIndex = tempColumns[0].findIndex((item) => item === target);
-    let targetColumnIndex = 0;
-    if (targetRowIndex < 0) {
-      targetColumnIndex = 1;
-      targetRowIndex = tempColumns[1].findIndex((item) => item === target);
-    }
-
-    const tempSource = tempColumns[sourceColumnIndex][sourceRowIndex];
-    tempColumns[sourceColumnIndex][sourceRowIndex] =
-      tempColumns[targetColumnIndex][targetRowIndex];
-
-    tempColumns[targetColumnIndex][targetRowIndex] = tempSource;
-
-    setColumns(tempColumns);
-  };
+  
 
   useEffect(() => {
     setColumns([
       [sections.project, sections.education, sections.summary],
       [sections.workExp, sections.achievement, sections.other],
     ]);
-  }, []);
+  }, [sections]);
 
   useEffect(() => {
+    const swapSourceTarget = (source, target) => {
+      if (!source || !target) return;
+      const tempColumns = [[...columns[0]], [...columns[1]]];
+
+      let sourceRowIndex = tempColumns[0].findIndex((item) => item === source);
+      let sourceColumnIndex = 0;
+      if (sourceRowIndex < 0) {
+        sourceColumnIndex = 1;
+        sourceRowIndex = tempColumns[1].findIndex((item) => item === source);
+      }
+
+      let targetRowIndex = tempColumns[0].findIndex((item) => item === target);
+      let targetColumnIndex = 0;
+      if (targetRowIndex < 0) {
+        targetColumnIndex = 1;
+        targetRowIndex = tempColumns[1].findIndex((item) => item === target);
+      }
+
+      const tempSource = tempColumns[sourceColumnIndex][sourceRowIndex];
+      tempColumns[sourceColumnIndex][sourceRowIndex] =
+        tempColumns[targetColumnIndex][targetRowIndex];
+
+      tempColumns[targetColumnIndex][targetRowIndex] = tempSource;
+
+      setColumns(tempColumns);
+    };
     swapSourceTarget(source, target);
-  }, [source]);
+  }, [target, source, columns ]);
 
   useEffect(() => {
     const container = containerRef.current;
