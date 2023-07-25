@@ -479,6 +479,7 @@ function Editor(props) {
         }));
         break;
       }
+      default:
     }
   };
 
@@ -585,7 +586,7 @@ function Editor(props) {
       linkedin: activeInfo.details[activeDetailIndex]?.linkedin || "",
       github: activeInfo.details[activeDetailIndex]?.github || "",
       college: activeInfo.details[activeDetailIndex]?.college || "",
-    }); 
+    });
   }, [activeDetailIndex]);
 
   return (
