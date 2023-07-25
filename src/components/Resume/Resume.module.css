@@ -44,6 +44,7 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header .link svg {
